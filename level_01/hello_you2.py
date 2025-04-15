@@ -1,0 +1,6 @@
+# HELLO_YOU
+name_input = input("What is your name? ".upper())
+name_input = name_input.upper()
+print(f"hello {name_input}!".upper())
+character_count = len(name_input)
+print (f"your name has {character_count} letters in it! awesome!".upper())
