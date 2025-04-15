@@ -4,7 +4,7 @@ guess_prompt = "I am thinking of a number between 1 and 10."
 secret_num = random.randint(1, 10)
 print(guess_prompt)
 
-guesses = int(5)
+guesses = 5
 
 while guesses > 0 :
     guess_num = int(input(" What's the number? "))
