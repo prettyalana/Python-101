@@ -1,32 +1,28 @@
 # Tip Calculator
 # TODO: Make this DRY
 
-bill_total = input("Bill total: ")
-bill_total = float(bill_total)
-rating = input(" How was your service: Good, Bad, or Fair? ")
-rating = rating.lower()
+def tip_calculator() :
+    bill_total = input("Bill total: ")
+    bill_total = float(bill_total)
+    rating = input(" How was your service: Good, Bad, or Fair? ")
+    rating = rating.lower()
 
-# Visit the key value pairs later
-# tip_percentages = {
-#     "good": (20 / 100),
-#     "fair": (15 / 100),
-#     "bad": (10 / 100)
-# }
+    good_rating = (20 / 100) * bill_total
+    fair_rating = (15 / 100) * bill_total
+    bad_rating = (10 / 100) * bill_total
 
-good_rating = (20 / 100) * 100
-fair_rating = (15 / 100) * 100
-bad_rating = (10 / 100) * 100
-
-    
-if rating == "good" :
-    total_amount = float(bill_total + good_rating)
-    print(f"{good_rating}")
-    print(f"Your total is {total_amount}")
-elif rating == "fair" :
-    total_amount = float(bill_total + fair_rating)
-    print(f"{fair_rating}")
-    print(f"Your total is {total_amount}")
-else :
-    total_amount = float(bill_total + bad_rating)
-    print(f"{bad_rating}")
-    print(f"Your total is {total_amount}")
+        
+    if rating == "good" :
+        total_amount = float(bill_total + good_rating)
+        # :.2f ensures that the the number is displayed as a floating-point with two decimal places and round up if necessary
+        print(f"${good_rating:.2f}")
+        print(f"Your total is ${total_amount:.2f}")
+    elif rating == "fair" :
+        total_amount = float(bill_total + fair_rating)
+        print(f"${fair_rating:.2f}")
+        print(f"Your total is ${total_amount:.2f}")
+    else :
+        total_amount = float(bill_total + bad_rating)
+        print(f"${bad_rating:.2f}")
+        print(f"Your total is ${total_amount:.2f}")
+tip_calculator()
