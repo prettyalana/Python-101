@@ -1,17 +1,17 @@
-# tip_calc2.py
+# Tip Calculator Cont...
 
 from tip_calc import get_user_inputs, tip_calculation
 
 def extended_tip_calculator():
-    bill_total, rating = get_user_inputs()
+    bill_amount, rating = get_user_inputs()
     
-    bill_total = float(bill_total)
+    bill_amount = float(bill_amount)
 
     party_number = int(input("Split how many ways? "))
 
-    tip_amount = tip_calculation(bill_total, rating)
+    tip_amount = tip_calculation(bill_amount, rating)
 
-    total_amount = bill_total + tip_amount
+    total_amount = bill_amount + tip_amount
 
     total_per_person = total_amount / party_number
 
