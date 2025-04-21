@@ -20,5 +20,7 @@ if __name__ == "__main__":
         print ("Thursday")
     elif day == 5 :
         print ("Friday")
-    else :
+    elif day == 6:
         print ("Saturday")
+    else :
+        print("Invalid day")
